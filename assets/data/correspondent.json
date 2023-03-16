@@ -1,0 +1,63 @@
+[
+    {
+        "id": "0006112021",
+        "name": "Alice Dupond",
+        "image": "/assets/images/correspondents/avatar-1.jpg"
+    },
+    {
+        "id": "0006112022",
+        "name": "Sophie Dubois",
+        "image": "/assets/images/correspondents/avatar-2.jpg"
+    },
+    {
+        "id": "0006112023",
+        "name": "Louise Macron",
+        "image": "/assets/images/correspondents/avatar-3.jpg"
+    },
+    {
+        "id": "0006112024",
+        "name": "Suzanne Marion",
+        "image": "/assets/images/correspondents/avatar-4.jpg"
+    },
+    {
+        "id": "0006112025",
+        "name": "Bill Gates",
+        "image": "/assets/images/correspondents/bill-gates.jpg"
+    },
+    {
+        "id": "0006112026",
+        "name": "Claudette Morichon",
+        "image": "/assets/images/correspondents/avatar-5.jpg"
+    },
+    {
+        "id": "0006112027",
+        "name": "Espero Akpoli",
+        "image": "/assets/images/correspondents/espero.jpg"
+    },
+    {
+        "id": "0006112028",
+        "name": "Miranda Deschamps",
+        "image": "/assets/images/correspondents/avatar-6.jpg"
+    },
+    {
+        "id": "0006112029",
+        "name": "Henreitte Eko",
+        "image": "/assets/images/correspondents/avatar-7.jpg"
+    },
+    {
+        "id": "0006112030",
+        "name": "Paul Desvariaux",
+        "image": "/assets/images/correspondents/avatar-8.jpg"
+    },
+    {
+        "id": "0006112031",
+        "name": "Henri Dumont",
+        "image": "/assets/images/correspondents/avatar-9.jpg"
+    },
+    {
+        "id": "0006112032",
+        "name": "Matthieu Giroud",
+        "image": "/assets/images/correspondents/avatar-10.jpg"
+    }
+
+]
