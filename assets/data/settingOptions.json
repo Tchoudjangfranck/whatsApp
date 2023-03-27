@@ -1,0 +1,34 @@
+[
+    {
+        "userOptionIcon": "fas fa-bell",
+        "userOptionName": "Notifications"
+    },
+    {
+        "userOptionIcon": "fas fa-lock",
+        "userOptionName": "Confidentialité"
+    },
+    {
+        "userOptionIcon": "fas fa-shield-alt",
+        "userOptionName": "Sécurité"
+    },
+    {
+        "userOptionIcon": "fas fa-star-half",
+        "userOptionName": "Thème"
+    },
+    {
+        "userOptionIcon": "fas fa-pager",
+        "userOptionName": "Fond d'écran de la discussion"
+    },
+    {
+        "userOptionIcon": "fas fa-file",
+        "userOptionName": "Démander les informations du compte"
+    },
+    {
+        "userOptionIcon": "fab fa-adn",
+        "userOptionName": "Raccourcis clavier"
+    },
+    {
+        "userOptionIcon": "fas fa-question-circle",
+        "userOptionName": "Aide"
+    }
+]

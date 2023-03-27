@@ -33,7 +33,7 @@ i
 
 .profil-image img
 {
-    border-radius: 50px;
+    border-radius: 80px;
     cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ i
     border-radius: 50px;    
 }
 
-.profil-icon  .dot-add-new-status
+.profil-icon .dot-add-new-status
 {
     top: 11px;
    left: 19px;
@@ -71,8 +71,53 @@ i
 .profil-description
 {
     padding: 8px;
-    cursor: pointer;
     /* background-color: var(--main-color-like-white); */
+}
+.profil-description-top
+{
+    height: 50px;
+    padding: 10px 20px;
+     background-color: var(--main-color-secondary);
+    color: var(--main-color-white);
+}
+
+.profil-description-top i
+{
+    color: var(--main-color-white);
+    cursor: pointer;
+}
+
+.profil-description-body
+{
+    padding: 20px 0;
+}
+.user-profil-details
+{
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+.user-pseudo .user-name
+{
+    font-weight: bold;
+    /* font-size: 0.8rem; */
+}
+.user-pseudo .user-slogan
+{
+    font-size: 0.8rem;
+    color: var(--main-color-gray);
+    padding-top: 3px;
+}
+
+.user-options li.user-option
+{
+    height: 45px;
+    padding: 0 20px;
+    /* border: 1px solid black; */
+}
+
+.user-option i
+{
+    font-size: 1rem;
 }
 
 .main .profil-icon:hover
@@ -115,6 +160,24 @@ i
     margin-right: 10px;
 }
 
+.more-options
+{
+    display: none;
+    width: 250px;
+    text-align: center;
+    top: 55px;
+    right: 15px;    
+    box-shadow: 2px 4px 8px var(--main-color-gray);
+    background-color: var(--main-color-white);
+}
+.more-options ul li
+{
+    padding: 10px;
+}
+.more-options ul li:hover
+{
+    background-color: var(--main-color-like-white);
+}
 .archive
 {
     font-size: 0.5rem;
@@ -170,6 +233,7 @@ i
     padding: 10px;
 }
 
+.user-options li.user-option:hover,
 .discussion-item:hover
 {
     cursor: pointer;
@@ -188,7 +252,7 @@ i
 .discussion-item .correspondent-starting-message,
 .discussion-current-time
 {
-    font-size: 0.2rem;
+    font-size: 0.8rem;
 }
 
 .view
@@ -203,6 +267,7 @@ i
 
 .main
 {
+    width: 100%;
     background-color: var(--main-color-like-gray);
     border-bottom: 5px solid var(--main-color-secondary);
 }
@@ -310,7 +375,7 @@ h1.description-title
 .discussion-details
 {
     right: 8px;
-    bottom: 10px;
+    bottom: 5px;
 }
 
 .text
@@ -360,7 +425,7 @@ h1.description-title
 {
     font-size: 0.8rem;
     padding: 5px;
-    left: -35px;
+    left: -30px;
     border-radius: 50px;
     color: var(--main-color-white);
     background-color: var(--main-color-gray);
@@ -377,8 +442,8 @@ h1.description-title
     width: 100%;
     max-width: none;
     min-width: auto;
+    animation: 2s linear slideINLetfToRight;
   }
-  /* width: ; */
 
   .profil-search-box
   {
@@ -396,15 +461,30 @@ h1.description-title
     display: none;
   }
 
+  .main-content .main-body
+  {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .main-header i
   {
     font-size: 1.2rem;
     display: block;
     cursor: pointer;
   }
-  .main-description
+  .main-description,
+  .users-text .sender-text,
+  .users-text .receiver-text
   {
     width: 80%;
-  }
-  
+  }    
 } 
+
+@media screen and (min-width: 971px)
+{  
+    .home .profil
+    {
+        display: block !important;
+    }    
+}

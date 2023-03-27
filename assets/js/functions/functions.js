@@ -12,7 +12,7 @@ let getCorrespondents = async () =>
     return dataCorrespondents;
 }
 
-let displayCorrespondents = async () =>
+export let displayCorrespondents = async () =>
 {
     let discussion = document.getElementById("discussion");
     discussion.innerHTML=""
@@ -36,7 +36,7 @@ let displayCorrespondents = async () =>
 
         let discussionItem = document.createElement("div");
         discussionItem.classList.add("discussion-item", "flex", "aic", "gap-10");
-
+        discussionItem.style.userSelect = "none";           
         let correspondentImage  = document.createElement("div");
         correspondentImage.classList.add("correspondent-image");
         let image  = document.createElement("img");
@@ -63,12 +63,24 @@ let displayCorrespondents = async () =>
         discussioCurrentTime.innerText = "16:35";
         discussionItem.appendChild(discussioCurrentTime);
         discussion.appendChild(discussionItem)
-        // console.log(discussionItem);
+        return discussionItem;
 
     });
 
 
 }
 
-
 displayCorrespondents();
+
+let getSettingOptions = async () =>
+{
+    let request = "/assets/data/settingOptions.json";
+    let data = await fetch(request);
+    if(!data.ok)
+    {
+        return;
+    }
+     let dataSettingOptions = await data.json();
+    //    console.log(dataSettingOptions);
+    return dataSettingOptions;
+}
