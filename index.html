@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,60 +15,226 @@
         <div class="home-top"></div>
         <div class="home-body"></div>
         <div class="home-content absolute flex">
-            <div class="profil flex-1" id="profil">
-                <div class="profil-top relative" id="profil-top">
-                    <div class="profil-description flex aic">
-                        <div class="profil-image flex aic flex-1">
-                            <img src="/assets/images/logo/franck.jpg" width="35" alt="" id="profil-image">
+            <aside class="flex-1" id="aside">
+                <div class="aside-home" id="aside-home">
+                    <div class="aside-home-top relative" id="aside-home-top">
+                        <div class="aside-home-description flex aic">
+                            <div class="profil-image flex aic flex-1">
+                                <img src="/assets/images/logo/franck.jpg" width="35" height="35" alt=""
+                                    id="profil-image">
+                            </div>
+                            <div class="aside-home-icons flex aic gap-10">
+                                <div class="aside-home-icon relative">
+                                    <i class="fas fa-spinner" id="show-stickers"></i>
+                                    <div class="dot-add-new-status absolute"></div>
+                                </div>
+                                <div class="aside-home-icon">
+                                    <i class="fas fa-comment-alt" id="show-contact"></i>
+                                </div>
+                                <div class="aside-home-icon" id="ellipsis-icon">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="profil-icons flex aic gap-10">
-                            <div class="profil-icon relative">
-                                <i class="fas fa-spinner"></i>
-                                <div class="dot-add-new-status absolute"></div>
+                        <div class="profil-search-box flex aic gap-10">
+                            <div class="profil-search flex aic gap-20 flex-1">
+                                <i class="fas fa-search"></i>
+                                <input type="search" name="search" id="search"
+                                    placeholder="Rechercher ou démarrer une nouvelle discussion">
                             </div>
-                            <div class="profil-icon">
-                                <i class="fas fa-comment-alt"></i>
-                            </div>
-                            <div class="profil-icon" id="ellipsis-icon">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="more-options absolute" id="more-options">
+                            <ul class="unlisted">
+                                <li class="unlisted-item" id="new-group">Nouveau groupe</li>
+                                <li class="unlisted-item" id="new-community">Nouvelle communauté</li>
+                                <li class="unlisted-item" id="importants-messages">Messageses importants</li>
+                                <li class="unlisted-item" id="setting">Paramètres</li>
+                                <li class="unlisted-item" id="sign-out">Déconnexion</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="profil-search-box flex aic gap-10">
-                        <div class="profil-search flex aic gap-20 flex-1">
-                            <i class="fas fa-search"></i>
-                            <input type="search" name="search" id="search"
-                                placeholder="Rechercher ou démarrer une nouvelle discussion">
+                    <div class="aside-home-body" id="aside-home-body">
+                        <div class="archive flex aic gap-20">
+                            <i class="fas fa-archive"></i>
+                            <div class="main-archive flex aic flex-1">
+                                <div class="archive-name flex-1">Archivées</div>
+                                <div class="archive-number-discussion text-center">6</div>
+                            </div>
                         </div>
-                        <i class="fas fa-filter"></i>
-                    </div> 
-                    
-                    <!-- <div class="profil-description-top flex aie gap-20">
-                        <i class="fas fa-arrow-left"></i>
-                        <div class="description">Paramètres</div>
-                    </div> -->
-                    <div class="more-options absolute" id="more-options">
-                        <ul class="unlisted" >
-                            <li class="unlisted-item" id="new-group">Nouveau groupe</li>
-                            <li class="unlisted-item" id="new-community">Nouvelle communauté</li>
-                            <li class="unlisted-item" id="importants-messages">Messageses importants</li>
-                            <li class="unlisted-item" id="setting">Paramètres</li>
-                            <li class="unlisted-item" id="sign-out">Déconnexion</li>
-                        </ul>
+                        <div class="discussion" id="discussion">
+                        </div>
                     </div>
                 </div>
-                <div class="profil-body" id="profil-body">
-                    <div class="archive flex aic gap-20">
-                        <i class="fas fa-archive"></i>
-                        <div class="main-archive flex aic flex-1">
-                            <div class="archive-name flex-1">Archivées</div>
-                            <div class="archive-number-discussion text-center">6</div>
-                        </div>
+                <div class="aside-setting" id="aside-setting">
+                    <div class="aside-setting-top" id="aside-setting-top">
+                        <div class="setting-description-top flex aie gap-20">
+                                <i class="fas fa-arrow-left" id= aside-setting-icon></i>
+                                <div class="description">Paramètres</div>
+                            </div>
                     </div>
-                    <div class="discussion" id="discussion">                       
+                    <div class="aside-setting-body" id="aside-setting-body">
+
                     </div>
                 </div>
-            </div>
+                <div class="aside-profil" id="aside-profil">
+                    <div class="aside-profil-top">
+                        <div class="setting-description-top flex aie gap-20">
+                            <i class="fas fa-arrow-left" id="aside-profil-icon"></i>
+                            <div class="description" id="aside-profil-description">Profil</div>
+                        </div>
+                    </div>
+                    <div class="aside-profil-body" id="aside-profil-body">
+                        <!-- <div class="profil-image-container relative">
+                            <div class="profil-image absolute">
+                                <div class="owner-image relative">
+                                    <img src="/assets/images/logo/franck.jpg" alt="" id="owner-image">
+                                    <div class="box-shadow-image flex column gap-10 jcc aic text-center absolute"
+                                        id="box-shadow-image">
+                                        <i class="fas fa-image"></i>
+                                        <div class="profil-name">changer la photo de profil</div>
+                                    </div>
+                                </div>
+                                <i class="fas fa-pen absolute"></i>
+                            </div>
+                        </div>
+                        <div class="profil-details-container">
+                            <div class="owner-infos flex gap-10">
+                                <i class="fas fa-portrait relative"></i>
+                                <div class="owner-details">
+                                    <div class="owner-name">Tchoudjang franck</div>
+                                    <div class="owner-visibility">Ce nom séra visible par vos client(e)s WhatsApp et
+                                        pourra etre modifié à partir de l'application sur voter appareil mobile
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="profil-options">
+                                <li class="profil-option flex gap-10 aic">
+                                    <i class="profil-option-icon fas fa-store-alt"></i>
+                                    <div class="profil-option-title flex-1">
+                                        Formateur sur la plateforme Mudey
+                                    </div>
+                                    <i class="profil-option-modified fas fa-pen"></i>
+                                </li>
+                                <li class="profil-option flex gap-10 aic">
+                                    <i class="profil-option-icon fas fa-tag"></i>
+                                    <div class="profil-option-title flex-1">
+                                        Finance, Formation
+                                    </div>
+                                    <i class="profil-option-modified fas fa-pen"></i>
+                                </li>
+                                <li class="profil-option flex gap-10 aic">
+                                    <i class="profil-option-icon fas fa-map-marker-alt"></i>
+                                    <div class="profil-option-title flex-1">
+                                        Adresse professionnelle
+                                    </div>
+                                    <i class="profil-option-modified fas fa-pen"></i>
+                                </li>
+                                <li class="profil-option flex gap-10 aic">
+                                    <i class="profil-option-icon far fa-clock"></i>
+                                    <div class="profil-option-title flex-1">
+                                        Horaire d'ouverture
+                                    </div>
+                                    <i class="profil-option-modified fas fa-pen"></i>
+                                </li>
+                                <li class="profil-option flex gap-10 aic">
+                                    <i class="profil-option-icon fas fa-envelope"></i>
+                                    <div class="profil-option-title flex-1">
+                                        Adresse e-mail
+                                    </div>
+                                    <i class="profil-option-modified fas fa-pen"></i>
+                                </li>
+                                <li class="profil-option flex gap-10 aic">
+                                    <i class="profil-option-icon fas fa-globe-americas"></i>
+                                    <div class="profil-option-title flex-1">
+                                        Site web
+                                    </div>
+                                    <i class="profil-option-modified fas fa-pen"></i>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="aside-stickers" id="aside-stickers">
+                    <div class="aside-stickers-top">
+                        <div class="stickers-description-top flex aie gap-20">
+                                <i class="fas fa-arrow-left" id="aside-stickers-icon"></i>
+                            <div class="description" id="aside-stickers-description">Etiquettes</div>
+                        </div>
+                    </div>
+                    <div class="aside-stickers-body" id="aside-stickers-body">
+                        <div class="user-stickers" id="user-stickers">
+                            <!-- <ul class="stickers-options">
+                                <li class="stickers-option flex aic gap-20">
+                                    <div class="stickers-option-icon">
+                                        <i class="bi bi-tag"></i>
+                                    </div>
+                                    <div class="option-description">
+                                        <div class="option-name">Nouveau client</div>
+                                        <div class="option-details">0 articles</div>
+                                    </div>
+                                </li>
+                                <li class="stickers-option flex aic gap-20">
+                                    <div class="stickers-option-icon">
+                                        <i class="bi bi-tag"></i>
+                                    </div>
+                                    <div class="option-description">
+                                        <div class="option-name">Nouvelle commande</div>
+                                        <div class="option-details">0 articles</div>
+                                    </div>
+                                </li>
+                                <li class="stickers-option flex aic gap-20">
+                                    <div class="stickers-option-icon">
+                                        <i class="bi bi-tag"></i>
+                                    </div>
+                                    <div class="option-description">
+                                        <div class="option-name">Paiement en attente</div>
+                                        <div class="option-details">0 articles</div>
+                                    </div>
+                                </li>
+                                <li class="stickers-option flex aic gap-20">
+                                    <div class="stickers-option-icon">
+                                        <i class="bi bi-tag"></i>
+                                    </div>
+                                    <div class="option-description">
+                                        <div class="option-name">Payé</div>
+                                        <div class="option-details">0 articles</div>
+                                    </div>
+                                </li>
+                                <li class="stickers-option flex aic gap-20">
+                                    <div class="stickers-option-icon">
+                                        <i class="bi bi-tag"></i>
+                                    </div>
+                                    <div class="option-description">
+                                        <div class="option-name">Commande terminée</div>
+                                        <div class="option-details">0 articles</div>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-discussion" id="aside-discussion">
+                    <div class="aside-discussion-top" id="aside-discussion-top">
+                        <div class="discussion-description-top flex aie gap-20">
+                                <i class="fas fa-arrow-left" id= aside-discussion-icon></i>
+                                <div class="description">Nouvelle discussion</div>
+                            </div>
+                    </div>
+                    <div class="aside-discussion-body">
+                        <div class="profil-search-box">
+                            <div class="profil-search flex aic gap-20 flex-1">
+                                <i class="fas fa-search"></i>
+                                <input type="search" name="search" id="search"
+                                    placeholder="Rechercher des contacts">
+                            </div>
+                        </div>
+                        
+                        <div class="discussion" id="contacts">
+                        </div>
+                    </div>
+                </div>
+            </aside>
             <div class="main flex-3 relative" id="main-box">
                 <div class="main-home flex jcc aic" id="main-home">
                     <div class="main-home-content">
@@ -85,69 +252,69 @@
                     </div>
                 </div>
                 <div class="main-content" id="main-content">
-                        <div class="main-header flex aic jcsb relative" id="main-header">
-                            <div class="profil-details flex aic gap-20">
-                                <i class="fas fa-bars none" id="burger-icon"></i>
-                                <div class="correspondent-infos flex aic gap-5">
-                                    <div class="correspondent-image">
-                                        <img src="/assets/images/correspondents/espero.jpg" width="35" alt="">
-                                    </div>
-                                    <div class="profil-description">Espero Akpoli</div>
+                    <div class="main-header flex aic jcsb relative" id="main-header">
+                        <div class="profil-details flex aic gap-20">
+                            <i class="fas fa-bars none" id="burger-icon"></i>
+                            <div class="correspondent-infos flex aic gap-5">
+                                <div class="correspondent-image">
+                                    <img src="/assets/images/correspondents/espero.jpg" width="35" alt="">
                                 </div>
-                            </div>
-                            <div class="profil-icons flex gap-10">
-                                <div class="profil-icon">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                                <div class="profil-icon">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </div>
+                                <div class="profil-description">Espero Akpoli</div>
                             </div>
                         </div>
-                        <div class="main-body">
-                            <div class="users-text flex column">
-                                <div class="sender-text flex aic relative p-5">
-                                    <i class="fas fa-share absolute"></i>
-                                    <a href="/assets/images/capture/capture-1.JPG" target="_blank" title="capture du code">
-                                        <div class="text-file-transfert">
-                                            <img src="/assets/images/capture/capture-1.JPG" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="discussion-details flex gap-5 absolute">
-                                        <div class="discussion-current-time">16:38</div>
-                                        <i class="bi bi-check-all view"></i>
+                        <div class="main-icons flex gap-10">
+                            <div class="main-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="main-icon">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-body">
+                        <div class="users-text flex column">
+                            <div class="sender-text flex aic relative p-5">
+                                <i class="fas fa-share absolute"></i>
+                                <a href="/assets/images/capture/capture-1.JPG" target="_blank" title="capture du code">
+                                    <div class="text-file-transfert">
+                                        <img src="/assets/images/capture/capture-1.JPG" alt="">
                                     </div>
+                                </a>
+                                <div class="discussion-details flex gap-5 absolute">
+                                    <div class="discussion-current-time">16:38</div>
+                                    <i class="bi bi-check-all view"></i>
                                 </div>
-                                <div class="sender-text flex aic relative p-5">
-                                    <i class="fas fa-share absolute"></i>
-                                    <a href="/assets/images/capture/capture-2.JPG" target="_blank">
-                                        <div class="text-file-transfert">
-                                            <img src="/assets/images/capture/capture-2.JPG" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="discussion-details flex gap-5 absolute">
-                                        <div class="discussion-current-time">16:38</div>
-                                        <i class="bi bi-check-all view"></i>
+                            </div>
+                            <div class="sender-text flex aic relative p-5">
+                                <i class="fas fa-share absolute"></i>
+                                <a href="/assets/images/capture/capture-2.JPG" target="_blank">
+                                    <div class="text-file-transfert">
+                                        <img src="/assets/images/capture/capture-2.JPG" alt="">
                                     </div>
-                                </div> 
-                                <div class="file-share-container flex aic">
+                                </a>
+                                <div class="discussion-details flex gap-5 absolute">
+                                    <div class="discussion-current-time">16:38</div>
+                                    <i class="bi bi-check-all view"></i>
                                 </div>
-                                <div class="receiver-text relative p-5">
-                                    <div class="text flex">
-                                        Bonjour monsieur Espero. Je n'arrive pas à trouver 
-                                        le code pour mettre mon image en pleine écran 
-                                        (responsive).J'ai déja vu ce code mais je n'arrive 
-                                        pas à le trouver. Je vous remercie. Je suis sur le 
-                                        TP5 le méga menu en css. Bien à vous.
-                                    </div>  
-                                    <div class="discussion-details flex gap-5 absolute">
-                                        <div class="discussion-current-time">16:38</div>
-                                    </div>
+                            </div>
+                            <div class="file-share-container flex aic">
+                            </div>
+                            <div class="receiver-text relative p-5">
+                                <div class="text flex">
+                                    Bonjour monsieur Espero. Je n'arrive pas à trouver
+                                    le code pour mettre mon image en pleine écran
+                                    (responsive).J'ai déja vu ce code mais je n'arrive
+                                    pas à le trouver. Je vous remercie. Je suis sur le
+                                    TP5 le méga menu en css. Bien à vous.
                                 </div>
-                                <!-- <div class="receiver-voice relative flex b">
+                                <div class="discussion-details flex gap-5 absolute">
+                                    <div class="discussion-current-time">16:38</div>
+                                </div>
+                            </div>
+                            <!-- <div class="receiver-voice relative flex b">
                                     <div class="voice-container">
                                        <div class="profil-image flex aic flex-1">
-                                        <img src="/assets/images/logo/franck.jpg" width="35" alt="">
+                                        <img src="/assets/images/logo/franck.jpg" width="35" height="35" alt="">
                                        </div>    
                                     </div> 
                                     <div class="audio-box">
@@ -160,48 +327,50 @@
                                         <i class="bi bi-check-all view"></i>
                                     </div>
                                 </div> -->
-                                <div class="sender-text relative p-5">
-                                    <div class="text">
-                                        Bonjour monsieur franck
-                                    </div>
-                                    <div class="discussion-details flex gap-5 absolute">
-                                        <div class="discussion-current-time">16:38</div>
-                                        <i class="bi bi-check-all not-view"></i>
-                                    </div>
+                            <div class="sender-text relative p-5">
+                                <div class="text">
+                                    Bonjour monsieur franck
                                 </div>
-                                <div class="sender-text relative p-5">
-                                    <div class="text">
-                                        ok. Vous pouvez m'envoyer vos identifiants Teamviewer ?
-                                    </div>
-                                    <div class="discussion-details flex gap-5 absolute">
-                                        <div class="discussion-current-time">16:40</div>
-                                        <i class="bi bi-check-all not-view"></i>
-                                    </div>
-                                </div>
-                                <div class="receiver-text relative p-5">
-                                    <div class="text flex">
-                                        D'accord monsieur je le fais toute de suite.
-                                    </div>  
-                                    <div class="discussion-details flex gap-5 absolute">
-                                        <div class="discussion-current-time">16:38</div>
-                                    </div>
+                                <div class="discussion-details flex gap-5 absolute">
+                                    <div class="discussion-current-time">16:38</div>
+                                    <i class="bi bi-check-all not-view"></i>
                                 </div>
                             </div>
-                            <div class="text-box absolute flex aic gap-10">
-                                <i class="bi bi-emoji-smile"></i>
-                                <i class="fas fa-paperclip"></i>
-                                <div class="search-box flex-1">
-                                    <input type="text" name="sender-message" id="sender-message" placeholder="Taper un message">
+                            <div class="sender-text relative p-5">
+                                <div class="text">
+                                    ok. Vous pouvez m'envoyer vos identifiants Teamviewer ?
                                 </div>
-                                <i class="bi bi-mic-fill"></i>
+                                <div class="discussion-details flex gap-5 absolute">
+                                    <div class="discussion-current-time">16:40</div>
+                                    <i class="bi bi-check-all not-view"></i>
+                                </div>
+                            </div>
+                            <div class="receiver-text relative p-5">
+                                <div class="text flex">
+                                    D'accord monsieur je le fais toute de suite.
+                                </div>
+                                <div class="discussion-details flex gap-5 absolute">
+                                    <div class="discussion-current-time">16:38</div>
+                                </div>
                             </div>
                         </div>
+                        <div class="text-box absolute flex aic gap-10">
+                            <i class="bi bi-emoji-smile"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <div class="search-box flex-1">
+                                <input type="text" name="sender-message" id="sender-message"
+                                    placeholder="Taper un message">
+                            </div>
+                            <i class="bi bi-mic-fill"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/assets/js/functions/functions.js" type="module"></script>
-    <script src="/assets/js/functions/listeners.js" type="module"></script>
+    <script src="/assets/js/functions/functions.js"></script>
+    <script src="/assets/js/functions/listeners.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
+
 </html>

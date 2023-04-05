@@ -1,3 +1,5 @@
+
+
 i
 {
     color: var(--main-color-gray);
@@ -16,7 +18,7 @@ i
 
 .home-content
 {
-    width: 80%;
+    width: 90%;
     height: 95vh;
     top: 50%;
     left: 50%;
@@ -24,20 +26,25 @@ i
     background-color: var(--main-color-like-gray);
 }
 
-.profil
+aside
 {
     min-width: 350px;
     max-width: 500px;
     background-color: var(--main-color-white);
 }
 
+.aside-home-description
+{
+    padding:  10px;
+}
+
 .profil-image img
 {
-    border-radius: 80px;
+    border-radius: 300px;
     cursor: pointer;
 }
 
-.profil-icon
+.aside-home-icon
 {
     display: flex;
     justify-content: center;
@@ -48,7 +55,7 @@ i
     height: 20px;
 }
 
-.profil-icon:hover
+.aside-home-icon:hover
 {
     background-color: var(--main-color-like-white);
     width: 20px;
@@ -58,7 +65,7 @@ i
     border-radius: 50px;    
 }
 
-.profil-icon .dot-add-new-status
+.aside-home-icon .dot-add-new-status
 {
     top: 11px;
    left: 19px;
@@ -68,12 +75,24 @@ i
     background-color: var(--main-color);
 }
 
-.profil-description
+.home-description
 {
     padding: 8px;
     /* background-color: var(--main-color-like-white); */
 }
-.profil-description-top
+
+.aside-setting,
+.aside-profil,
+.aside-stickers,
+.aside-discussion
+{
+    display: none;
+}
+
+.profil-description-top,
+.setting-description-top,
+.stickers-description-top,
+.discussion-description-top
 {
     height: 50px;
     padding: 10px 20px;
@@ -81,17 +100,20 @@ i
     color: var(--main-color-white);
 }
 
-.profil-description-top i
+.profil-description-top i,
+.setting-description-top i,
+.stickers-description-top i,
+.discussion-description-top i
 {
     color: var(--main-color-white);
     cursor: pointer;
 }
 
-.profil-description-body
+.setting-description-body
 {
     padding: 20px 0;
 }
-.user-profil-details
+.user-setting-details
 {
     margin-bottom: 10px;
     padding: 0 20px;
@@ -108,19 +130,168 @@ i
     padding-top: 3px;
 }
 
-.user-options li.user-option
+.user-options,
+.stickers-options
+{
+    margin: 20px 0;
+}
+
+.user-options li.user-option,
+.stickers-options li.stickers-option
 {
     height: 45px;
-    padding: 0 20px;
+    padding: 10px 20px;
     /* border: 1px solid black; */
 }
-
-.user-option i
+.stickers-option
 {
-    font-size: 1rem;
+    border-bottom:  0.1px solid var(--main-color-gray);
+}
+.user-option i,
+.stickers-option i
+{
+    font-size: 1.4rem;
+}
+.stickers-option-icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* background-color: green; */
+    /* padding: 5px; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+.stickers-option-icon i
+{
+    display: block;
+    color: var(--main-color-white);
+    transform: rotate(135deg);
+}
+.stickers-option .option-name
+{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.stickers-option .option-details
+{
+    color: var(--main-color-gray);
+}
+.aside-profil i
+{
+    font-size: inherit;
+}
+.aside-profil .aside-profil-body
+{
+    height: calc(100vh - 118px);
+    overflow: auto;
+    /* border: 1px solid blue; */
+}
+.profil-image-container
+{
+    height: 120px;
+    background-color: #EAF2F8;
+}
+.profil-image-container .profil-image
+{
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.profil-image-container .profil-image > i
+{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    right: 20px;
+    bottom: 80px;
+    background-color: var(--main-color-white);
+    cursor: pointer;
+    color: var(--main-color);
+}
+.profil-image-container .profil-image .owner-image
+{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 300px;
+}
+.profil-image .owner-image img
+{
+    width: 100%;
+    height: 100%;
+}
+.profil-image .owner-image .box-shadow-image
+{   
+    border: 1px solid red;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+    border-radius: 300px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: var(--main-color-white);
+    font-weight: bold;
+    background-color: var(--main-color-black);
+    cursor:pointer;
+    opacity: 0.7;
+}
+.profil-image .owner-image .box-shadow-image i
+{
+    color: var(--main-color-white);
+    font-size: 1.5rem !important;
 }
 
-.main .profil-icon:hover
+/* .profil-image-container .profil-image img
+{
+} */
+
+.profil-image-container .profil-image i:hover
+{
+    background-color: var(--main-color-like-gray);
+    /* color: var(--main-color-white); */
+}
+.profil-details-container
+{
+    margin-top: 70px;
+    background-color: var(--main-color-white);
+    
+}
+.profil-details-container i
+{
+    top: 5px;
+}
+.profil-details-container .owner-visibility
+{
+    font-size: 0.8rem;
+    margin: 15px 0;
+}
+.profil-details-container .owner-infos,
+.aside-profil .profil-option
+{
+    padding: 20px;
+}
+.profil-details-container .owner-infos:hover,
+.aside-profil .profil-option:hover
+{
+    cursor: pointer;
+    background-color: var(--main-color-like-white);
+}
+.profil-option .profil-option-title
+{
+    font-size: 0.9rem;
+} 
+.profil-option i.profil-option-modified
+{
+    cursor: pointer;
+}
+.main .main-icon:hover
 {
     background-color: var(--main-color-white);
 }
@@ -153,7 +324,7 @@ i
     outline: none;
     background-color: var(--main-color-like-white);
     flex: 1;
-    font-size: 0.5rem;
+    font-size: 1.1rem;
 }
 .profil-search-box i:last-child
 {
@@ -176,6 +347,7 @@ i
 }
 .more-options ul li:hover
 {
+    cursor: pointer;
     background-color: var(--main-color-like-white);
 }
 .archive
@@ -227,29 +399,34 @@ i
     background-color : var(--main-color);
 }
 
-.discussion-item
+.discussion-item,
+.contact-item
 {
     height: 30px;
     padding: 10px;
 }
 
 .user-options li.user-option:hover,
-.discussion-item:hover
+.discussion-item:hover,
+.contact-item:hover,
+.stickers-options li.stickers-option:hover
 {
     cursor: pointer;
     background-color: var(--main-color-like-white);
 }
-.correspondent-image img
+.correspondent-image img,
+.contact-image img
 {
     border-radius: 50px;
     cursor: pointer;
 }
-.discussion-item .corespondent-pseudo
+.contact-item .contact-pseudo
 {
     font-weight: bold;
     font-size: 0.9rem;
 }
 .discussion-item .correspondent-starting-message,
+.contact-item .contact-starting-message,
 .discussion-current-time
 {
     font-size: 0.8rem;
@@ -265,6 +442,10 @@ i
     color: var(--main-color-gray);
 }
 
+.aside-discussion .profil-search-box
+{
+    margin-right: 10px;
+}
 .main
 {
     width: 100%;
@@ -274,7 +455,7 @@ i
 
 .main-home
 {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 30px);
 }
 .main-home-content
 {
@@ -332,18 +513,20 @@ h1.description-title
     background-image: url("../images/background/bg-chat.png");
 }
 
-
-.main-body::-webkit-scrollbar
+.main-body::-webkit-scrollbar,
+.aside-profil-body::-webkit-scrollbar
 {
     width : 10px;
 }
 
-.main-body::-webkit-scrollbar-track
+.main-body::-webkit-scrollbar-track,
+.aside-profil-body::-webkit-scrollbar-track
 {
     background-color : var(--main-color-like-white);
 }
 
-.main-body::-webkit-scrollbar-thumb
+.main-body::-webkit-scrollbar-thumb,
+.aside-profil-body::-webkit-scrollbar-thumb
 {
     background-color : var(--main-color);
 }
@@ -411,6 +594,7 @@ h1.description-title
 {
     width: 100%;
     height: 30px;
+    padding-left: 10px;
     background-color: var(--main-color-white);
     color: var(--main-color-gray);
     outline: none;
@@ -437,7 +621,11 @@ h1.description-title
 
 @media screen and (max-width: 970px) 
 { 
-  .home-content .profil
+  .home .home-content
+  {
+    width: 90%;
+  }  
+  .home-content aside
   {
     width: 100%;
     max-width: none;
@@ -451,11 +639,7 @@ h1.description-title
     padding: 0 5px;
     justify-content: center;
   }
-  .profil-search-box .profil-search
-  {
-    margin: inherit;
-    padding: 5px;
-  }
+
   .main
   {
     display: none;
@@ -483,7 +667,7 @@ h1.description-title
 
 @media screen and (min-width: 971px)
 {  
-    .home .profil
+    .home aside
     {
         display: block !important;
     }    

@@ -1,0 +1,32 @@
+[
+    {
+        "stickersOptionIcon": "bi bi-tag",
+        "stickersOptionName": "Nouveau client",
+        "stickersOptionDetails": "0 articles(e)",
+        "stickersOptionIconBackgrongColor": "#00BFFF"
+    },
+    {
+        "stickersOptionIcon": "bi bi-tag",
+        "stickersOptionName": "Nouvelle commande",
+        "stickersOptionDetails": "5 articles(e)",
+        "stickersOptionIconBackgrongColor": "#FFD700"
+    },
+    {
+        "stickersOptionIcon": "bi bi-tag",
+        "stickersOptionName": "Paiement en attente",
+        "stickersOptionDetails": "2 articles(e)",
+        "stickersOptionIconBackgrongColor": "#F08080"
+    },
+    {
+        "stickersOptionIcon": "bi bi-tag",
+        "stickersOptionName": "Payé",
+        "stickersOptionDetails": "9 articles(e)",
+        "stickersOptionIconBackgrongColor": "#DDA0DD"
+    },
+    {
+        "stickersOptionIcon": "bi bi-tag",
+        "stickersOptionName": "Commande terminée",
+        "stickersOptionDetails": "6 articles(e)",
+        "stickersOptionIconBackgrongColor": "#3CB371"
+    }
+]

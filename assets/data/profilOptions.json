@@ -1,0 +1,27 @@
+[
+    {
+        "profilOptionIcon": "fas fa-store-alt",        
+        "profilOptionTitle": "Formateur sur la plateforme Mudey"        
+    },
+    {
+        "profilOptionIcon": "fas fa-tag",        
+        "profilOptionTitle": "Finance, Formation"        
+    },
+    {
+        "profilOptionIcon": " fas fa-map-marker-alt",        
+        "profilOptionTitle": "Adresse professionnelle"        
+    },
+    {
+        "profilOptionIcon": "far fa-clock",
+        "profilOptionTitle": "Horaire d'ouverture"        
+        
+    },
+    {
+        "profilOptionIcon": "fas fa-envelope",        
+        "profilOptionTitle": "Adresse e-mail"        
+    },
+    {
+        "profilOptionIcon": "fas fa-globe-americas",        
+        "profilOptionTitle": "Site web"        
+    }
+]
