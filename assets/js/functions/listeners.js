@@ -14,6 +14,8 @@ let listenersFunction =
     asideDiscussion: document.getElementById("aside-discussion"),
     mainbox: document.getElementById("main-box"),
     moreOption: document.getElementById("more-options"),
+    overlay: document.getElementById("overlay"),
+    signOut: document.getElementById("sign-out"),
     
     displayMessages: function()
     {
@@ -38,8 +40,8 @@ let listenersFunction =
 
     displayAsideProfil: async function()
     {
-        listenersFunction.asideHome.style.display = "none";
         listenersFunction.asideProfil.style.display = "block";
+        listenersFunction.asideProfil.style.zIndex = 5;
         listenersFunction.asideProfilBody.innerHTML = "";
 
         let asideProfilImageContainer = document.createElement("div");
@@ -135,8 +137,9 @@ let listenersFunction =
 
     displaySettingBloc: async function()
     {
-        listenersFunction.asideHome.style.display = "none";
+       
         listenersFunction.asideSetting.style.display = "block";
+        listenersFunction.asideSetting.style.zIndex = 5;
 
         let settingDescriptionBody = document.createElement("div");
         settingDescriptionBody.classList.add("setting-description-body");
@@ -207,8 +210,9 @@ let listenersFunction =
     },
     displayAsideStickers: async function()
     {   
-        listenersFunction.asideHome.style.display = "none";
+       
         listenersFunction.asideStickers.style.display = "block";
+        listenersFunction.asideStickers.style.zIndex = 5;
         listenersFunction.asideUserStickers.innerHTML = "";
 
         let stickersOptions = await displayStickersOptions();
@@ -216,20 +220,49 @@ let listenersFunction =
     },
     displayAsidecontact: async function()
     {   
-        listenersFunction.asideHome.style.display = "none";
+       
         listenersFunction.asideContact.style.display = "block";
-        // listenersFunction.asideContact.innerHTML = "";
+        listenersFunction.asideContact.style.zIndex = 5;
+
 
         let contactOptions = await displayContacts();
         listenersFunction.asideContact.appendChild(contactOptions);
     },
     displayAsideBlocs: function ()
     {
-        listenersFunction.asideHome ? listenersFunction.asideHome.style.display = "block" : null;            
-        listenersFunction.asideSetting ? listenersFunction.asideSetting.style.display = "none" : null;
-        listenersFunction.asideProfil ? listenersFunction.asideProfil.style.display = "none" : null;
-        listenersFunction.asideStickers ? listenersFunction.asideStickers.style.display = "none" : null;
-        listenersFunction.asideDiscussion ? listenersFunction.asideDiscussion.style.display = "none" : null;
+        if ((listenersFunction.asideProfil 
+            && getComputedStyle(listenersFunction.asideProfil, null).display == "block")
+            || (listenersFunction.asideStickers 
+            && getComputedStyle(listenersFunction.asideStickers, null).display == "block") 
+            || (listenersFunction.asideDiscussion 
+            && getComputedStyle(listenersFunction.asideDiscussion, null).display == "block")
+            || (listenersFunction.asideSetting 
+                && getComputedStyle(listenersFunction.asideSetting, null).display == "block")) 
+            {
+                listenersFunction.asideProfil.classList.add("close");
+                listenersFunction.asideStickers.classList.add("close");
+                listenersFunction.asideDiscussion.classList.add("close");
+                listenersFunction.asideSetting.classList.add("close");
+
+                setTimeout(() => 
+                {
+                    listenersFunction.asideProfil.classList.remove("close");
+                    listenersFunction.asideProfil.style.zIndex = "5";
+                    listenersFunction.asideProfil.style.display = "none";
+                    
+                    listenersFunction.asideStickers.classList.remove("close");
+                    listenersFunction.asideStickers.style.zIndex = "5";
+                    listenersFunction.asideStickers.style.display = "none";
+          
+                    listenersFunction.asideDiscussion.classList.remove("close");
+                    listenersFunction.asideDiscussion.style.zIndex = "5";
+                    listenersFunction.asideDiscussion.style.display = "none";
+                    
+                    listenersFunction.asideSetting.classList.remove("close");
+                    listenersFunction.asideSetting.style.zIndex = "5";
+                    listenersFunction.asideSetting.style.display = "none";
+            }, 1000);
+        } 
     },
     displayBoxShadowImage: function()
     {
@@ -240,6 +273,16 @@ let listenersFunction =
     {
         let boxShadowImage = document.getElementById("box-shadow-image");
         boxShadowImage.style.display = "none";
+    },
+    displaySignOut: function()
+    {
+        listenersFunction.overlay.style.display = "block";
+        listenersFunction.signOut.style.display = "block";
+    },
+    displayCancelSingOut: function()
+    {
+        listenersFunction.overlay.style.display = "none";
+        listenersFunction.signOut.style.display = "none";
     }
 }
 
@@ -284,4 +327,11 @@ let setUpListeners = () =>
 
     let settingIcon = document.getElementById("setting");
     settingIcon.addEventListener("click", listenersFunction.displaySettingBloc);
+    
+    let signOutButton = document.getElementById("sign-out-btn");
+    signOutButton.addEventListener("click", listenersFunction.displaySignOut);
+
+    let cancelSignOut = document.getElementById("cancel-sign-out");
+    cancelSignOut.addEventListener("click", listenersFunction.displayCancelSingOut);
+
  }

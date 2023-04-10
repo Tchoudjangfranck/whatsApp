@@ -88,6 +88,62 @@ aside
 {
     display: none;
 }
+.aside-home,
+.aside-setting,
+.aside-profil,
+.aside-stickers,
+.aside-discussion
+{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: var(--main-color-white);
+}
+
+.aside-profil,
+.aside-stickers,
+.aside-discussion,
+.aside-setting
+{
+    left: 0;
+    animation: slideInLeftToRight 1s linear forwards;
+}
+
+aside .aside-profil.close,
+aside .aside-stickers.close,
+aside .aside-discussion.close,
+aside .aside-setting.close
+{
+    right: 0;
+    animation: slideOutRightToLeft 1s linear forwards;
+}
+
+/********************SLIDE ASIDE HOME******************************************/
+@keyframes slideInLeftToRight 
+{
+    from
+    {
+        transform: translateX(-150%);
+    }
+    to
+    {
+        transform: translateX(0%);
+    }   
+}
+
+/********************SLIDE ASIDE PROFIL******************************************/
+@keyframes slideOutRightToLeft 
+{
+    from
+    {
+        transform: translateX(0%);  
+    }
+
+    to  
+    {
+        transform: translateX(-150%);
+    }   
+}
 
 .profil-description-top,
 .setting-description-top,
@@ -183,7 +239,9 @@ aside
 {
     font-size: inherit;
 }
-.aside-profil .aside-profil-body
+.aside-profil .aside-profil-body,
+.aside-stickers .aside-stickers-body,
+.aside-setting .aside-setting-body
 {
     height: calc(100vh - 118px);
     overflow: auto;
@@ -384,17 +442,23 @@ aside
     overflow: auto;
 }
 
-.discussion::-webkit-scrollbar
+.discussion::-webkit-scrollbar,
+.aside-stickers-body::-webkit-scrollbar,
+.aside-setting-body::-webkit-scrollbar
 {
     width : 10px;
 }
 
-.discussion::-webkit-scrollbar-track
+.discussion::-webkit-scrollbar-track,
+.aside-stickers-body::-webkit-scrollbar-track,
+.aside-setting-body::-webkit-scrollbar-track
 {
     background-color : var(--main-color-like-white);
 }
 
-.discussion::-webkit-scrollbar-thumb
+.discussion::-webkit-scrollbar-thumb,
+.aside-stickers-body::-webkit-scrollbar-thumb,
+.aside-setting-body::-webkit-scrollbar-thumb
 {
     background-color : var(--main-color);
 }
@@ -619,6 +683,66 @@ h1.description-title
     width: 100%;
 }
 
+.overlay
+{
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color-white);
+    z-index: 10;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.sign-out
+{
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-color-white);
+    width: 400px;
+    height: 160px;
+    padding: 10px;
+    z-index: 20;
+    box-shadow: 4px 2px 8px var(--main-color-gray), 
+                4px 2px 8px var(--main-color-gray);
+}
+.sign-out h2
+{
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+}
+.sign-out-body .description
+{
+    font-weight: bold;
+    padding: 20px 0;
+}
+.sign-out-body .buttons
+{
+    height: 55px;
+}*
+.sign-out-body .buttons button
+{
+    height: 40px;
+    width: 120px;
+    outline: none;
+    border: 1px solid var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+.sign-out-body .buttons button.btn-cancel
+{
+    background-color: var(--main-color-white);
+    color: var(--main-color);
+}
+.sign-out-body .buttons button.btn-sign-out
+{
+    color: var(--main-color-white);
+    background-color: var(--main-color);
+}
 @media screen and (max-width: 970px) 
 { 
   .home .home-content
@@ -630,7 +754,6 @@ h1.description-title
     width: 100%;
     max-width: none;
     min-width: auto;
-    animation: 2s linear slideINLetfToRight;
   }
 
   .profil-search-box

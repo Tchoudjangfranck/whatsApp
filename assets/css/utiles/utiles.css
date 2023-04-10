@@ -71,6 +71,9 @@ body{
 .jcse{
     justify-content: space-evenly;
 }
+.jcfe{
+    justify-content: end;
+}
 .aic, .flex-center-v{
     align-items: center;
 }
