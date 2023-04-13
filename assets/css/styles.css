@@ -123,7 +123,7 @@ aside .aside-setting.close
 {
     from
     {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }
     to
     {
@@ -141,7 +141,7 @@ aside .aside-setting.close
 
     to  
     {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }   
 }
 
