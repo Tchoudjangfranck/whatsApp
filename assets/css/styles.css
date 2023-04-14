@@ -30,6 +30,7 @@ aside
 {
     min-width: 350px;
     max-width: 500px;
+    overflow: hidden;
     background-color: var(--main-color-white);
 }
 
@@ -87,6 +88,7 @@ aside
 .aside-discussion
 {
     display: none;
+    transform: translateX(-100%);
 }
 .aside-home,
 .aside-setting,
